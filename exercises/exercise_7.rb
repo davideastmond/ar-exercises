@@ -13,4 +13,10 @@ puts "----------"
 puts "Enter a store name"
 @store_name = gets.chomp
 
-Store.create(:name => @store_name)
+@newStore = Store.create(:name => @store_name, :annual_revenue => 500000, :mens_apparel => true)
+
+@newStore.errors.each do |k, v|
+  puts "Error: #{k} #{v}"
+end
+
+

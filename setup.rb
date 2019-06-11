@@ -1,8 +1,8 @@
 require 'pry' # in case you want to use binding.pry
 require 'active_record'
+require_relative 'lib/customvalid'
 require_relative 'lib/store'
 require_relative 'lib/employee'
-require_relative 'lib/customvalid'
 
 # Output messages from Active Record to standard out
 ActiveRecord::Base.logger = Logger.new(STDOUT)
