@@ -5,7 +5,8 @@ class Store < ActiveRecord::Base
   # validates :mens_apparel, presence: true
   # validates :womens_apparel, presence: true
   validates_with MyValidator
-
+  
+  private
   before_save :default_values
   def default_values
     self.womens_apparel ||= false
