@@ -1,5 +1,6 @@
 require 'pry' # in case you want to use binding.pry
 require 'active_record'
+require_relative 'lib/randomstring'
 require_relative 'lib/customvalid'
 require_relative 'lib/store'
 require_relative 'lib/employee'
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define do
     table.column :first_name, :string
     table.column :last_name, :string
     table.column :hourly_rate, :integer
+    table.column :password, :string
     table.timestamps null: false
   end
 end
